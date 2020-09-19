@@ -1,4 +1,3 @@
-<< << << < HEAD
 let main = document.getElementById("main");
 
 let div1 = document.createElement('div');
@@ -63,9 +62,4 @@ div3.setAttribute("id", "divv3")
 let button = document.createElement("button");
 div3.appendChild(button)
 button.setAttribute("id", "btn")
-button.textContent = "Create Account"; ===
-=== =
-var main = document.querySelector("main");
-var div1 = document.createElement('div');
-main.appendChild("div1"); >>>
->>> > a7ae5fd8e9b17a43ab5f61bf2910678477733e16
+button.textContent = "Create Account";
