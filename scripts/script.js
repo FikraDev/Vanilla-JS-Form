@@ -63,3 +63,15 @@ let button = document.createElement("button");
 div3.appendChild(button)
 button.setAttribute("id", "btn")
 button.textContent = "Create Account";
+
+function checkform() {
+    if (inputName.value == '' || inputName.value <= 2) {
+        alert("Your username value is too short or empty")
+            //} else if (inputEmail.value == '' || ) {}
+
+    }
+
+
+}
+
+checkform();
