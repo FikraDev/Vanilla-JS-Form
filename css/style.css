@@ -39,6 +39,12 @@ form input {
     padding: 10px;
     margin-bottom: 10px;
     width: 100%;
+    height: 40px;
+}
+
+#cbox {
+    width: 5%;
+    height: 15px;
 }
 
 form button {
@@ -60,7 +66,7 @@ strong {
 }
 
 #divv2 {
-    align-items: left;
+    display: flex;
 }
 
 #divv3 {
