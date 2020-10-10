@@ -20,8 +20,8 @@ inputName.setAttribute("placeholder", "Enter Full Name");
 
 let inputEmail = document.createElement("input");
 form.appendChild(inputEmail);
-inputEmail.setAttribute("type", "email");
-inputEmail.setAttribute("id", "email");
+inputEmail.setAttribute("type", "text");
+inputEmail.setAttribute("id", "email1");
 inputEmail.setAttribute("placeholder", "Enter Email Address");
 
 let inputEmail2 = document.createElement("input");
@@ -51,7 +51,7 @@ div2.appendChild(inputCheckBox);
 inputCheckBox.setAttribute("type", "checkbox");
 inputCheckBox.setAttribute("id", "cbox");
 
-let checkBoxTxt = document.createElement("p");
+let checkBoxTxt = document.createElement("label");
 div2.appendChild(checkBoxTxt);
 checkBoxTxt.innerHTML = "I accept the <strong>Terms of Use</strong> & <strong>Privacy Policy</strong>";
 
@@ -63,15 +63,3 @@ let button = document.createElement("button");
 div3.appendChild(button)
 button.setAttribute("id", "btn")
 button.textContent = "Create Account";
-
-function checkform() {
-    if (inputName.value == '' || inputName.value <= 2) {
-        alert("Your username value is too short or empty")
-            //} else if (inputEmail.value == '' || ) {}
-
-    }
-
-
-}
-
-checkform();
