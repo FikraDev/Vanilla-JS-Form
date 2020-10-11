@@ -63,3 +63,53 @@ let button = document.createElement("button");
 div3.appendChild(button)
 button.setAttribute("id", "btn")
 button.textContent = "Create Account";
+
+//Form Validation functions
+
+function checkName() {
+    if (inputName.value == '' || inputName.value.length < 3) {
+        alert("Your username value is too short or empty");
+        document.form.inputName.focus(); //prevents other alerts until this input is met
+    }
+}
+
+function checkEmail() {
+    const emailValue = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    if (inputEmail.value.match(emailValue) || inputEmail.value != '') {
+        return true;
+    } else {
+        alert('Invalid Email Format!')
+        document.form.inputEmail.focus();
+    }
+}
+
+function checkMail2() {
+    if ((inputEmail.value) !== (inputEmail2.value)) {
+        alert("Emails do not match!");
+        document.form.inputEmail2.focus();
+    }
+}
+
+function checkPwd() {
+    if (inputPassword.value == ' ' || inputPassword.value.length <= 6) {
+        alert("Password must not be empty or < 6 characters");
+        document.form.inputPassword.focus();
+    }
+}
+
+function confirmPwd2() {
+    if (inputPassword.value !== inputPassword2.value) {
+        alert("Passwords do not match!")
+        inputPassword2.style.backgroundColor = 'red';
+        document.form.inputPassword2.focus();
+    }
+
+}
+
+document.getElementById('btn').onclick = function checkAll() {
+    checkName();
+    checkEmail();
+    checkMail2();
+    checkPwd();
+    confirmPwd2();
+}
